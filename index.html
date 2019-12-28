@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+
+</head>
+<body>
+ <div class="container-fluid" id="header_container">
+     <div class="row" id="navbar_row">
+        <div class="col-xl-12">
+            <div class="navbar navbar-expand-sm  " id="navbar">
+                <img src="images/logo.png" class="float-right" width="50px" height="50px">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon" id="navbar_toggle"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto" id="navigation_nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">KEZDŐLAP <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#about_container" id="features_tab">FUNKCIÓK <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#features_container_2" id="about_us_tab">RÓLUNK <span class="sr-only">(current)</span></a>
+                      </li>
+                     
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#" id="contact_tab">KAPCSOLAT <span class="sr-only">(current)</span></a>
+                      </li>
+                     
+                </ul>
+              
+         </div>
+
+    </div>
+  <div class="row" id="header_row_2">
+   
+    <div class="col-xl-6" id="header_col">
+      <h1>Lorem ipsum site</h1>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+      </p>
+      <button type="button" class="btn btn-danger" onclick="register_window(1)">PRÓBÁLD KI</button>
+    </div>
+    <div class="col-xl-6" id="header_col_2" >
+      <img src="images/bg.png" width="80%">
+    </div>
+    <div id="register_div">
+      <h5>Regisztrálj</h5>
+      <form method="post" action="register.php" onsubmit=" return check_form()">
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Név</span>
+          
+        </div>
+        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="name">
+        
+      </div>
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Vezetéknév</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+        
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Felhasználónév" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Email cím" aria-label="Email cím" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2">@example.com</span>
+        </div>
+      </div>
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Jelszó</span>
+        </div>
+        <input type="password" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+        
+      </div>
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Jelszó mégegyszer</span>
+        </div>
+        <input type="password" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+        
+      </div>
+      <button type="submit" class="btn btn-primary">Regisztrálok</button>
+      <button type="button" class="btn btn-danger" onclick="register_window(2)">Mégsem</button>
+    </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+ </div>
+ 
+      <div class="container-fluid" id="features_container">
+        <div class="row">
+          <div class="col-xl-2" id="features_col" >
+           <img src="images/icon1.png" width="110px" height="80px">
+           <h6>Lorem ipsum</h6>           
+                    </div>
+                    <div class="col-xl-2" id="features_col">
+                      <img src="images/icon2.png" width="110px" height="80px">
+           <h6>Lorem ipsum</h6>        
+                    </div>
+                    <div class="col-xl-2" id="features_col" width="50%">
+                      <img src="images/icon3.png" width="110px" height="80px">
+           <h6>Lorem ipsum</h6>        
+                    </div>
+                    <div class="col-xl-2" id="features_col" width="50%">
+                      <img src="images/icon4.png" width="110px" height="80px">
+           <h6>Lorem ipsum</h6> 
+        </div>
+       
+      </div>
+      </div>
+      
+      <div class="container-fluid" id="about_container">
+        
+        <div class="row" >
+          <div class="col-xl-12" id="about_col">
+<h2>About <b>lorem ipsum</b></h2>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+
+</p>
+          </div>
+        <div class="col-xl-6">
+ <h2>Lorem ipsum</h2>
+ <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  orem Ipsum is simply dummy text of the printing and typesetting industry.
+  orem Ipsum is simply dummy text of the printing and typesetting industry.
+ 
+  orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+
+
+        </div>
+        <div class="col-xl-6">
+ <img src="images/7411.jpg" width="80%">
+        </div>
+        </div>
+        
+      </div>
+
+
+      <div class="container-fluid" id="features_container_2">
+ <h2><b>FUNKCIÓK</b></h2>
+ <p>lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  lorem Ipsum is simply dummy text of the printing and typesetting industry. orem Ipsum is simply dummy text of the printing and typesetting industry.
+
+ </p>
+ 
+ <div class="row">
+  <div class="col-xl-4">
+    <div class="col-xl-12">
+
+      <img src="images/favicon4.png" width="20%">
+      <h4>Kedvenc helyek</h4>
+      <p>
+        Lorem ipsum dolor sit amet consect etur adipisicing elited do eiusmod tempor incidi dout labore magna.
+      </p>
+    </div>
+    <img src="images/favicon2.png" width="20%">
+      <h4>Helyek ahol jártál</h4>
+      <p>
+        Lorem ipsum dolor sit amet consect etur adipisicing elited do eiusmod tempor incidi dout labore magna.
+      </p>
+    </div>
+         
+   <div class="col-xl-4">
+   <img src="images/phone.png" width="80%">
+  </div>      
+  <div class="col-xl-4">
+    <div class="col-xl-12">
+
+      <img src="images/favicon3.png" width="20%">
+      <h4>Helyek a közelben</h4>
+      <p>
+        Lorem ipsum dolor sit amet consect etur adipisicing elited do eiusmod tempor incidi dout labore magna.
+      </p>
+    </div>
+    <div class="col-xl-12">
+
+      <img src="images/favicon1.png" width="20%">
+      <h4>Emlékek</h4>
+      <p>
+        Lorem ipsum dolor sit amet consect etur adipisicing elited do eiusmod tempor incidi dout labore magna.
+      </p>
+    </div>
+  </div> 
+ </div>     
+</div>
+</div>
+
+<div class="container-fluid" >
+  <div class="row"  id="footer">
+
+     
+    <div class="col-xl-6">
+      <h6>© 2019 Copyright: Lorem ipsum</h6>
+    
+    </div>   
+   <div class="col-xl-6">
+    <a href="x">Link1</a>
+     <a href="x">Link1</a>
+     <a href="x">Link1</a>
+     <a href="x">Link1</a>
+   </div>
+    
+  </div>
+</div>
+
+
+</body>
+</html>
