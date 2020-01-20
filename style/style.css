@@ -1,0 +1,230 @@
+body,html{
+    height: 80%;
+    background: #215f00;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #e4e4d9, #215f00);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #e4e4d9, #68aa45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+margin: 0 auto;
+    width: 100%;
+
+}
+
+.container-fluid{
+    padding: 0;
+}
+#navbar_row{
+    background-color: transparent;
+
+    
+}
+
+#settings_col{
+    width: 100%;
+    padding: 0;
+}
+#header_container{
+    background-image: url("../images/2.jpg");
+    background-size: cover;
+    min-height: 100%;
+   
+}
+#navbar,#navigation_nav{
+  
+    margin: 0 auto;
+
+}
+#navbar a {
+    color: white;
+}
+#navbar a:hover{
+    border-bottom: 1px solid white;
+}
+#navbar_toggle{
+color: blue;
+}
+#header_row_2{
+    margin-top: 150px;
+    margin-left: 50px;
+}
+h1{
+  font-weight: 900;
+    color: white;
+}
+p{
+    color: black;
+    font-weight: 400;
+}
+#features_container{
+    margin-top: -25px;
+}
+#features_col{
+   
+    margin: 0 auto;
+    background-color: 	  #d9ffb3
+
+    ;
+    border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 0px solid #000000;
+text-align: center;
+
+}
+img{
+    margin: 0 auto;
+    display: block;
+    padding: 5px;
+    border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 0px solid #000000;
+}
+#about_col{
+    text-align: center;
+   
+  
+}
+b{
+    color: #1F65DB;
+}
+#about_container{
+    margin-top: 100px;
+    
+}
+#features_container_2{
+ 
+    margin-top: 200px;
+    text-align: center;
+
+}
+*{
+    font-family: 'Quicksand', sans-serif;
+
+}
+#footer{
+    background-color: #000000;
+    min-height: 75px;
+    padding: 25px;
+}
+h6{
+    color: white;
+}   
+#footer a {
+    padding-left: 10px;
+    float: right;
+}
+#register{
+    width: 100%;
+    height:
+            400px;
+   /* margin-top: -355px;*/
+   /* margin-left: 450px;*/
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: white;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    padding: 20px;
+    display: none;
+
+
+
+overflow: hidden;
+}
+#form_name_input{
+
+}
+#name_span,#username_span,#email_span,#password_one_span,#password_two_span,#lastname_span{
+    height: 25px;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+}
+#username_span h5{
+    color: red;
+    padding: 0;
+    margin: 0;
+}
+#username_span h6{
+    color: darkgreen;
+    padding: 0;
+    margin: 0;
+}
+#form_name_input,#form_email_input,#form_lastname_input,#form_username_input,#form_password_one,#form_password_two{
+    height: 25px;
+}
+
+#login_container {
+
+    width: 100%;
+    height:
+            400px;
+    /* margin-top: -355px;*/
+    /* margin-left: 450px;*/
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: white;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    padding: 20px;
+    display: none;
+    margin: 0 auto;
+}
+#login_span{
+    width: 100%;
+    margin: 0 auto;
+}
+td{
+    width:200px;
+    background-color: #6495ED;
+    text-align: center;
+    padding: 15px;
+
+    -webkit-box-shadow: 1px 2px 6px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 6px -1px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 6px -1px rgba(0,0,0,0.75);
+    font-size: 18px;
+    font-weight: 400;
+}
+#icons{
+    font-size: 20px;
+    color: #215f00;
+}
+#profile_pic{
+    margin: 1px;
+}
+#home_main_col{
+
+    -webkit-box-shadow: 0px 1px 12px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 12px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 12px -4px rgba(0,0,0,0.75);
+}
+#main_h5,#main_button{
+    top: 50%;
+    position: absolute;
+    margin: 0 auto;
+    align-self: self-end;
+}
+#first_col{
+    width: 95%;
+
+
+}
+#map {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
