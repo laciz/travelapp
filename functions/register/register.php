@@ -1,10 +1,10 @@
 <?php
 include '../db_config.php';
 include '../functions.php';
- /*if ( isset($_POST['form_name_input']) and isset($_POST['form_lastname_input']) and isset($_POST['form_username_input'])
+ if ( isset($_POST['form_name_input']) and isset($_POST['form_lastname_input']) and isset($_POST['form_username_input'])
     and isset($_POST['form_email_input']) and  isset($_POST['form_password_one'])
      and isset($_POST['form_password_two']))
-   {*/
+   {
 
   $firstname=mysqli_real_escape_string($con,$_POST['form_name_input']);
     $lastname=mysqli_real_escape_string($con,$_POST['form_lastname_input']);
@@ -30,10 +30,9 @@ include '../functions.php';
 
 
 
-/*
+
  }else{
 
  header("location:index.html");
  }
 
-*/

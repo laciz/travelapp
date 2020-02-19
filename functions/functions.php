@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include 'db_config.php';
 
 
@@ -26,8 +28,8 @@ values('$firstname','$lastname','$username','$password','$email','$hash')";
 
 function send_mail($username,$email,$hash){
 
-    $to      = $email; // Send email to our user
-    $subject = 'Signup | Verification'; // Give the email a subject
+    $to      = $email; 
+    $subject = 'Signup | Verification'; 
     $message = '
  
  
@@ -42,39 +44,17 @@ Username: '.$username.'
 ------------------------
  
 Please click this link to activate your account:
-http://localhost:7080/travel/verify.php?email='.$email.'&hash='.$hash.'
+http://localhost/travel/verify.php?email='.$email.'&hash='.$hash.'
  
-'; // Our message above including the link
+'; 
 
 
 
 
-    $headers = 'From:noreply@yourwebsite.com' . "\r\n"; // Set from headers
-    mail($to, $subject, $message,$headers); // Send our email
-
-}
-
-
-function loginUser($password,$email){
-
-    global $con;
-    $salt="schoolproject";
-   $pass=md5($password);
-    $query="SELECT * from users where email='$email' and password='$pass'";
-    $run=mysqli_query($con,$query);
-    $row=mysqli_fetch_array($run);
-
-    $verified=$row['active'];
-    if (mysqli_num_rows($run) > 0 && $verified==1){
-        echo "bejelentkezes".
-             " 
-   ";
-
-        header("location: index.php");
-
-    }else{
-        echo "<br><br><p style='color:darkred;'>" ."Helytelen felhasználónév vagy email cím". "</p>";
-
-    }
+    $headers = 'From:noreply@yourwebsite.com' . "\r\n"; 
+    mail($to, $subject, $message,$headers); 
 
 }
+
+
+
