@@ -7,10 +7,10 @@ function register_window(a){
     var c=a; 
     if(c == 1){
          document.getElementById("register").style.display="grid";
-         document.getElementById("header_col").style.filter="blur(5px)";
-         document.getElementById("header_col_2").style.filter="blur(5px)";
-         document.getElementById("features_container").style.filter="blur(5px)";
-         document.getElementById("about_col").style.filter="blur(5px)";
+         //document.getElementById("header_col").style.filter="blur(5px)";
+        // document.getElementById("header_col_2").style.filter="blur(5px)";
+         //document.getElementById("features_container").style.filter="blur(5px)";
+        // document.getElementById("about_col").style.filter="blur(5px)";
         document.getElementById("login_container").style.display="none";
         // document.body.style.overflow="hidden";
      }
@@ -34,6 +34,12 @@ function register_window(a){
 
      }
      }
+
+    function block_form(){
+        return false;
+    }
+
+
 /*
 function check_form(){
     var name=document.getElementById("form_name_input").value;
@@ -79,7 +85,7 @@ function user_register(){
 
         };
 
-
+  
 
     var name=document.getElementById("form_name_input").value;
     var lastname=document.getElementById("form_lastname_input").value;
@@ -98,14 +104,11 @@ function user_register(){
 }
 
 
-document.getElementById("form_name_input").onchange = function() {firstName()};
-document.getElementById("form_lastname_input").onchange = function() {lastName()};
-document.getElementById("form_username_input").onchange = function() {userName()};
-document.getElementById("form_email_input").onchange = function() {emailAdress()};
-document.getElementById("form_password_one").onchange = function() {password()};
-document.getElementById("form_password_two").onchange = function() {password()};
+/**********************************************FIRSTNAME */
 
-function firstName() {
+ function firstName (){
+
+ 
 
     var name = document.getElementById("form_name_input");
     var name_span=document.getElementById("name_span");
@@ -115,16 +118,21 @@ function firstName() {
            "";
       // name_span.style.backgroundColor="red";
      name_span.style.color="red";
-
-        document.getElementById("submit_button").addEventListener("click", function(event){
-            event.preventDefault()
-        });
+    
+     return false;
+    
     }else{
        name_span.innerHTML="Megfelelő név";
        name_span.style.color="darkgreen";
+     return true;
     }
 }
-function lastName(){
+
+/**********************************************lastname */
+
+function lastName () {
+
+
     var lastname = document.getElementById("form_lastname_input");
     var lastname_span=document.getElementById("lastname_span");
     var numbers = /^[a-zA-Z\u00C0-\u00FF]+$/;
@@ -134,15 +142,18 @@ function lastName(){
             "";
        // lastname_span.style.backgroundColor="red";
         lastname_span.style.color="red";
-        document.getElementById("submit_button").addEventListener("click", function(event){
-            event.preventDefault()
-        });
+       return true;
+        
     }else{
         lastname_span.innerHTML="Megfelelő név";
        lastname_span.style.color="darkgreen";
+       return false;
+ 
+     
     }
-
 }
+
+/**********************************************username*/
 
 function userName(){
     var xmlhttp = new XMLHttpRequest();
@@ -160,23 +171,32 @@ function userName(){
     xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xmlhttp.send(params)
 }
-function emailAdress(){
+
+/**********************************************email */
+function emailAdress () {
+
+
+
     var email=document.getElementById("form_email_input").value;
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 var email_span=document.getElementById("email_span");
     if (email.match(mailformat)==null){
         email_span.innerHTML="Nem megfelelő email formátum";
         email_span.style.color="red";
-        document.getElementById("submit_button").addEventListener("click", function(event){
-            event.preventDefault()
-        });
+      
+return false;
     }else{
         email_span.innerHTML="Megfelelő email cím";
         email_span.style.color="darkgreen";
+     return true;
+    
     }
 
-
 }
+
+
+/**********************************************password  */
+
 
 function password(){
     var password_one=document.getElementById("form_password_one").value;
@@ -191,9 +211,7 @@ function password(){
         password_span.style.color="red";
         password_one_span.style.color="red";
 
-        document.getElementById("submit_button").addEventListener("click", function(event){
-            event.preventDefault()
-        });
+        return false;
     }
 
      else if(password_one!==password_two){
@@ -202,9 +220,8 @@ function password(){
         password_one_span.innerHTML="A jelszavak nem egyeznek";
         password_span.style.color="red";
         password_one_span.style.color="red";
-        document.getElementById("submit_button").addEventListener("click", function(event){
-            event.preventDefault()
-        });
+        
+        return false;
     }
 
      else if (password_one===password_two){
@@ -215,22 +232,55 @@ function password(){
             password_span.style.color="darkgreen";
             password_one_span.style.color="darkgreen";
 
+           return true;
     }
-
 
 
 }
 
-function loginUser(callback){
+
+document.getElementById("form_name_input").onchange = function() {firstName();check();};
+document.getElementById("form_lastname_input").onchange = function() {lastName();check();};
+document.getElementById("form_username_input").onchange = function() {userName()};
+document.getElementById("form_email_input").onchange = function() {emailAdress();check();};
+document.getElementById("form_password_one").onchange = function() {password();check();};
+document.getElementById("form_password_two").onchange = function() {password();check();};
+
+
+function check(){
+    if(firstName(),lastName(),emailAdress(),password()){
+        document.getElementById("submit_button").style.pointerEvents = "auto";
+    }else{
+        document.getElementById("submit_button").style.pointerEvents = "none";
+    }
+}
+
+function loginUser(){
 
     var xmlhttp = new XMLHttpRequest();
-xmlhttp.responseText="";
-
-var response=xmlhttp.responseText;
-
+    
     xmlhttp.onreadystatechange=function(){
-      document.getElementById("login_span").innerHTML=xmlhttp.responseText;
+        var response=xmlhttp.responseText;
+      if(response == "true"){
+           
+        location.replace("../home/index.php"); 
+         
+       // document.getElementById("login_span").innerHTML="";
+      /* setTimeout(function(){ 
 
+           // location.replace("home/index.html"); 
+         }, 3000);*/
+       
+         
+    } if(response == "false"){
+        document.getElementById("login_span").innerHTML="Hibás  email cím vagy jelszó";
+        document.getElementById("login_span").style.color="red";
+      
+       
+
+    }
+      
+    
 
     };
 
@@ -245,37 +295,9 @@ var response=xmlhttp.responseText;
     xmlhttp.send(params);
 }
 
-
-var map, infoWindow;
-function myMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-        center:{lat:-33,lng:151},
-        zoom: 10
-    });
-    infoWindow = new google.maps.InfoWindow;
-
-    if(navigator.geolocation){
-
-        navigator.geolocation.getCurrentPosition(function(p){
-            var position={
-                lat:p.coords.latitude,
-                lng:p.coords.longitude
-            };
-
-            infoWindow.setPosition(position);
-            infoWindow.setContent("Itt tartozkodsz:");
-            infoWindow.open(map);
-            map.setCenter(position);
-        })
-
-    }else{
-handleLocationError("Engedélyezd a geolokációt",map.center());
-    }
-
-  
+if(navigator.geolocation){
+    alert("true");
+}else{
+    
 }
-function handleLocationError(content,position){
-    infoWindow.setPosition(position);
-    infoWindow.setContent(content);
-    infoWindow.open(map);
-}
+
