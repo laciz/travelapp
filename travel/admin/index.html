@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Admin panel for school project job">
+
+   
+    <link href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+   
+
+</head>
+<body>
+<style>
+    #admin_login{
+        margin: 0 auto;
+        padding: 10px;
+    }
+</style>
+
+<div class='container-fluid'>
+
+
+<div class='row'>
+
+    <div  class="col-xl-6" id="admin_login">
+
+
+
+        <h5 class="register_text">Admin Bejelentkezés</h5>
+        <form  id="login_user" method="POST"  action="admin.php">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="login_email_span">Email cim</span>
+
+                </div>
+                <input type="text" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="login_email" name="admin_email">
+
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="ntm">Jelszó</span>
+                </div>
+                <input type="password" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="login_password" name="admin_password">
+
+            </div>
+            <input type="submit" class="btn btn-primary" name="submit_register" id="login_button" value="Bejelentkezés" ></button>
+            <span id="login_span"></span>
+
+        </form>
+    </div>
+
+</div>
+
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel</title>
+    <meta charset="utf-8">
+    <meta name="description" content="School project job">
+    <meta name="keywords" content="Travel,Places,Routing,Social Media">
+    <meta name="author" content="Horvath Valentin,Laci Zoltan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+   
+   
+</head>
+<body >
+ <div class="container-fluid" id="header_container">
+     <div class="row" id="navbar_row">
+        <div class="col-xl-12" id="menu_col">
+            <nav  class="navbar fixed-top navbar-expand-sm  " id="navbar">
+                <img src="images/logo.png" class="float-right" width="50px" height="50px">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon" id="navbar_toggle"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto" id="navigation_nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">KEZDŐLAP <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#about_container" id="features_tab">FUNKCIÓK <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#features_container_2" id="about_us_tab">RÓLUNK <span class="sr-only">(current)</span></a>
+                      </li>
+                     
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#" id="contact_tab">KAPCSOLAT <span class="sr-only">(current)</span></a>
+                      </li>
+
+                    <li class="nav-item active">
+                          <a class="nav-link"  id="loginbtn" onclick="register_window(3)">Bejelentkezés <span class="sr-only">(current)</span></a>
+                      </li>
+                </ul>
+              
+         </div>
+         </nav>
+
+    </div>
+  <div class="row" id="header_row_2">
+   
+    <div class="col-xl-6" id="header_col">
+      <h1>A tökéletes kaland élményhez</h1>
+      <p>
+        Megtervezzük utazásaid,hogy azok minnél kényelmesebb és eseménydúsabbak legyenek.
+      </p>
+      <button type="button" class="btn btn-danger" id="registerbtn"  onclick="register_window(1)">PRÓBÁLD KI</button>
+    </div>
+    <div class="col-xl-6" id="header_col_2" >
+      <img src="images/bg.png" width="80%">
+    </div>
+
+
+
+
+      </div>
+    <!--<div id="register_div_container">-->
+    <!--    <div  class="col-xl-12" id="register">
+      <h5 class="register_text"> Regisztrálj</h5>
+      <form  id="register_user" method="POST"  onsubmit=" return check_form()">
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="name_span">Név</span>
+          
+        </div>
+        <input type="text" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="form_name_input" name="form_name_input">
+
+      </div>
+
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="lastname_span">Vezetéknév</span>
+
+        </div>
+        <input type="text" class="form-control" id="form_lastname_input" name="form_lastname_input" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="username_span">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Felhasználónév" aria-label="Username" aria-describedby="basic-addon1" id="form_username_input" name="form_username_input">
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Email cím" aria-label="Email cím" aria-describedby="basic-addon2" id="form_email_input" name="form_email_input">
+        <div class="input-group-append">
+          <span class="input-group-text" id="email_span">Email címed</span>
+
+        </div>
+
+      </div>
+
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="password_one_span">Jelszó</span>
+        </div>
+        <input type="password" class="form-control" placeholder="Minimum 6 karakter" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="form_password_one" name="form_password_one">
+
+      </div>
+
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="password_two_span">Jelszó mégegyszer</span>
+        </div>
+        <input type="password" class="form-control" placeholder="Minimum 6 karakter" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="form_password_two" name="form_password_two">
+
+      </div>
+
+      <button type="submit" class="btn btn-primary" name="submit_register" id="submit_button"  onclick="user_register()">Regisztrálok</button>
+      <button type="button" class="btn btn-danger" onclick="register_window(2)">Mégsem</button>
+    </form>
+      </div>
+      <div id="login">
+            <h5 class="register_text"> Jelentkezz be</h5>
+
+            <form  id="register_user" method="POST"  onsubmit=" return check_form()">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="name_span">Név</span>
+
+                    </div>
+                    <input type="text" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="form_name_input" name="form_name_input">
+
+                </div>
+
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="lastname_span">Vezetéknév</span>
+
+                    </div>
+                    <input type="password" class="form-control" placeholder="Minimum 6 karakter" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="form_password_two" name="form_password_two">
+
+                </div>
+                <button type="submit" class="btn btn-primary" name="submit_register" id="submit_button"  onclick="user_register()">BEJELENTKEZES</button>
+            </form>
+        </div>
+ </div>-->
+
+
+
+
+  </div>
+</div>
+
+     <div  class="col-xl-6" id="login_container">
+
+
+
+         <h5 class="register_text"> Bejelentkezés</h5>
+         <form  id="login_user" method="POST"  action="./functions/login/checklogin.php">
+             <div class="input-group input-group-sm mb-3">
+                 <div class="input-group-prepend">
+                     <span class="input-group-text" id="login_email_span">Email cim</span>
+
+                 </div>
+                 <input type="text" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="login_email" name="login_email">
+
+             </div>
+
+             <div class="input-group input-group-sm mb-3">
+                 <div class="input-group-prepend">
+                     <span class="input-group-text" id="ntm">Jelszó</span>
+                 </div>
+                 <input type="password" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="login_password" name="login_password">
+
+             </div>
+             <input type="submit" class="btn btn-primary" name="submit_register" id="login_button" value="Bejelentkezés" ></button>
+             <span id="login_span"></span>
+
+         </form>
+     </div>
+     <div  class="col-xl-12 col-md-12 col-sm-6 col-xs-6" id="register">
+         <h5 class="register_text"> Regisztrálj</h5>
+         <form  id="register_user" method="POST" action="www.google.com" >
+             <div class="input-group input-group-sm mb-3">
+                 <div class="input-group-prepend">
+                     <span class="input-group-text" id="name_span">Név</span>
+
+                 </div>
+                 <input type="text" class="form-control"  aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="form_name_input" name="form_name_input">
+
+             </div>
+
+             <div class="input-group input-group-sm mb-3">
+                 <div class="input-group-prepend">
+                     <span class="input-group-text" id="lastname_span">Vezetéknév</span>
+
+                 </div>
+                 <input type="text" class="form-control" id="form_lastname_input" name="form_lastname_input" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+
+             </div>
+
+             <div class="input-group mb-3">
+                 <div class="input-group-prepend">
+                     <span class="input-group-text" id="username_span">@</span>
+                 </div>
+                 <input type="text" class="form-control" placeholder="Felhasználónév" aria-label="Username" aria-describedby="basic-addon1" id="form_username_input" name="form_username_input">
+             </div>
+
+             <div class="input-group mb-3">
+                 <input type="text" class="form-control" placeholder="Email cím" aria-label="Email cím" aria-describedby="basic-addon2" id="form_email_input" name="form_email_input">
+                 <div class="input-group-append">
+                     <span class="input-group-text" id="email_span">Email címed</span>
+
+                 </div>
+
+             </div>
+
+             <div class="input-group input-group-sm mb-3">
+                 <div class="input-group-prepend">
+                     <span class="input-group-text" id="password_one_span">Jelszó</span>
+                 </div>
+                 <input type="password" class="form-control" placeholder="Minimum 6 karakter" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="form_password_one" name="form_password_one">
+
+             </div>
+
+             <div class="input-group input-group-sm mb-3">
+                 <div class="input-group-prepend">
+                     <span class="input-group-text" id="password_two_span">Jelszó mégegyszer</span>
+                 </div>
+                 <input type="password" class="form-control" placeholder="Minimum 6 karakter" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="form_password_two" name="form_password_two">
+
+             </div>
+
+             <input type="submit" class="btn btn-primary" name="submit_register" id="submit_button"  value="register" onclick="user_register()"></input>
+             <button type="button" class="btn btn-danger" onclick="register_window(2)">Mégsem</button>
+
+         </form>
+     </div>
+</div>
+
+ 
+      <div class="container-fluid" id="features_container">
+        <div class="row">
+          <div class="col-xl-2 col-md-6" id="features_col" >
+           <img src="images/icon1.png" width="80px" height="60px">
+           <h6>Éttermek</h6> 
+           <p>Kipróbálhatod a közeledben lévő legjobb éttermeket</p>          
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-sm-12 " id="features_col">
+                      <img src="images/icon2.png" width="80px" height="60px">
+           <h6>Going out</h6>
+           <p>Szórakozó helyek, bárak, és kávézók</p>        
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-sm-12" id="features_col" width="50%">
+                      <img src="images/icon3.png" width="80px" height="60px">
+           <h6>Szállás</h6>        
+           <p>Alvó helyek,hotelok,motelok  </p>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-sm-12" id="features_col" width="50%">
+                      <img src="images/icon4.png" width="80px" height="60px">
+           <h6>Helyszínek</h6> 
+           <p>Rákereshetsz bármilyen helyszínre amiről hallottál</p>
+        </div>
+       
+      </div>
+      </div>
+      
+      <div class="container-fluid" id="about_container">
+        
+        <div class="row" id="home_page_row">
+          <div class="col-xl-12 col-md-6 col-sm-12" id="about_col">
+<h1>Rólunk <b>bővebben</b></h1>
+<p>Az applikáció  legfőbb célja,hogy megkönnyítse felhasználóinak az utazásád, kirándulását.Az engedélyeddel 
+   folyamatosan  nyomon követjük,hogy a világ mely részén  tartózkodsz jelenleg és pontos koordináták segitségével
+   begyüjtsük azokat a helyszíneket amelyek a közeledben vannak, és érdekelhetnek téged.
+
+</p>
+          </div>
+        <div class="col-xl-6 col-md-6 col-sm-12" id="aboutcol1">
+ <h2>Miért előnyös?</h2>
+ <p>Egy megszokott térképen  számtalan olyan adat, helyszín van feltüntetve amelyek egy utazás 
+   során   nem érdeklik a felhasználót, és csak arra szolgálnak,hogy  rákeressünk dolgokra ,
+   de vajon egy idegen országban honnan  ismernénk bármit is? 
+  <br><br>
+  Itt jövünk képbe mi, hiszen ez az applikáció  csak olyan információkat, helyszíneket és útvonalakat  tüntet fel
+  amelyek téged érdekelnek.Ezek mellett felkínál olyan helyszíneket is  amelyek nevét egyébként nem tudnád , és nem 
+  tudnál rákeresni.
+
+        </div>
+        <div class="col-xl-6 col-md-12 col-sm-12" >
+ <img src="images/7411.jpg" width="80%">
+        </div>
+        </div>
+        
+      </div>
+
+
+      <div class="container-fluid" id="features_container_2">
+ <h1><b>FUNKCIÓK</b></h1>
+ <p> Számtalan olyan funkciót helyeztünk el az applikácíóban amelyek  segítenek  megkönnyíteni és megörökíteni az élményeid.
+   Statisztikát készítünk a helyekről ahol jártál,  amelyet egy dinamikus  térképen  tüntetünk fel,  így bármikor  amikor nosztalgiáznál 
+   visszanézheted ezeket, valamint megoszthatod barátaiddal a közösségi  oldalakon. 
+
+ </p>
+ 
+ <div class="row">
+  <div class="col-xl-4 col-md-4">
+    <div class="col-xl-12">
+
+      <img src="images/favicon4.png" width="20%">
+      <h4>Kedvenc helyek</h4>
+      <p>
+        Jártál egy helyen ami megtetszett  és visszanéznél valamikor? 
+      </p>
+    </div>
+    <img src="images/favicon2.png" width="20%">
+      <h4>Helyek ahol jártál</h4>
+      <p>
+       Sokat utazol, és érdekel,hogy    mely helyeket látogattad meg   utazásaid során? 
+      </p>
+    </div>
+         
+   <div class="col-xl-4 col-md-4">
+   <img src="images/phone.png" width="80%">
+  </div>      
+  <div class="col-xl-4 col-md-4">
+    <div class="col-xl-12 ">
+
+      <img src="images/favicon3.png" width="20%">
+      <h4>Helyek a közelben</h4>
+      <p>
+        Helyszínek  a pontos  koordinátáidhoz közel.
+      </p>
+    </div>
+    <div class="col-xl-12 ">
+
+      <img src="images/favicon1.png" width="20%">
+      <h4>Emlékek</h4>
+      <p>
+        Készíts fotókat, és tárold el őket az emlékek  között.
+      </p>
+    </div>
+  </div> 
+ </div>     
+</div>
+</div>
+
+<div class="container-fluid" >
+  <div class="row"  id="footer">
+
+     
+    <div class="col-xl-6">
+      <h6>© 2019 Copyright: Lorem ipsum</h6>
+    
+    </div>   
+   <div class="col-xl-6">
+    <a href="x">Gyakori kérdések</a>
+     <a href="x">Felhasználási feltételek</a>
+    
+     
+   </div>
+    
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
